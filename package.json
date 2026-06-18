@@ -1,5 +1,5 @@
 {
-  "name": "@thesimonharms/jrg-client",
+  "name": "jrg-client",
   "version": "0.1.0",
   "description": "TypeScript client for fetching Jaringan (JRG) pages via HTTP gateway or raw TCP",
   "type": "module",

@@ -13,9 +13,9 @@
 ## Install
 
 ```bash
-npm install @thesimonharms/jrg-client
+npm install jrg-client
 # or
-bun add @thesimonharms/jrg-client
+bun add jrg-client
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ bun add @thesimonharms/jrg-client
 Use when you have a JRG→HTTP gateway running (e.g. on port 18080). Works in any environment with `fetch` — browsers, Node 18+, Bun, Deno.
 
 ```ts
-import { JrgClient } from '@thesimonharms/jrg-client';
+import { JrgClient } from 'jrg-client';
 
 const client = new JrgClient({
   transport: { type: 'http', baseUrl: 'http://localhost:18080' },
@@ -45,7 +45,7 @@ console.log(page.title); // "Jaringan Page" (title tag from HTML)
 Connects directly to a JRG server over TCP. Only works in server-side runtimes.
 
 ```ts
-import { JrgClient } from '@thesimonharms/jrg-client';
+import { JrgClient } from 'jrg-client';
 
 const client = new JrgClient({
   transport: { type: 'tcp', host: 'localhost', port: 7080, timeout: 3000 },
@@ -72,7 +72,7 @@ const page2 = await client.fetchPage('jrg://localhost:7080/wiki/welcome');
 Reads `.jrg` files directly from disk — great for testing or offline access.
 
 ```ts
-import { JrgClient } from '@thesimonharms/jrg-client';
+import { JrgClient } from 'jrg-client';
 
 const client = new JrgClient({
   transport: { type: 'file', root: '/home/lekmon/wiki' },
@@ -136,7 +136,7 @@ interface TransportResult {
 You can also use the individual utilities:
 
 ```ts
-import { parseJrgUrl, parseJrgResponse, parseJrgPage, stripPageMetadata } from '@thesimonharms/jrg-client';
+import { parseJrgUrl, parseJrgResponse, parseJrgPage, stripPageMetadata } from 'jrg-client';
 
 // Parse a JRG URL
 const url = parseJrgUrl('jrg://localhost:7080/welcome');
