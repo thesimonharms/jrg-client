@@ -1,0 +1,37 @@
+{
+  "name": "jrg-client",
+  "version": "0.1.0",
+  "description": "TypeScript client for fetching Jaringan (JRG) pages via HTTP gateway or raw TCP",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "bun test"
+  },
+  "keywords": [
+    "jaringan",
+    "jrg",
+    "protocol",
+    "client"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
