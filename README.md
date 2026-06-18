@@ -159,7 +159,7 @@ git clone https://github.com/thesimonharms/jrg-client
 cd jrg-client
 npm install
 npm run build
-node dist/index.js
+node --input-type=module -e "import { JrgClient } from './dist/index.js'; console.log('OK')"
 ```
 
 ## License

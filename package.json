@@ -1,7 +1,7 @@
 {
   "name": "jrg-client",
   "version": "0.1.0",
-  "description": "TypeScript client for fetching Jaringan (JRG) pages via HTTP gateway or raw TCP",
+  "description": "TypeScript client for fetching Jaringan (JRG) pages — supports HTTP gateway, raw TCP, and local file transports",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -13,8 +13,10 @@
     }
   },
   "files": [
-    "dist/"
+    "dist/",
+    "LICENSE"
   ],
+  "sideEffects": false,
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
@@ -24,9 +26,21 @@
     "jaringan",
     "jrg",
     "protocol",
-    "client"
+    "client",
+    "decentralized",
+    "hypermedia",
+    "p2p"
   ],
   "license": "MIT",
+  "author": "Simon Harms",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesimonharms/jrg-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thesimonharms/jrg-client/issues"
+  },
+  "homepage": "https://github.com/thesimonharms/jrg-client#readme",
   "devDependencies": {
     "@types/node": "^25.9.3",
     "typescript": "^5.5.0"
