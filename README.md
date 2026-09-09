@@ -1,3 +1,7 @@
+> **Moved.** This GitHub copy is an archive. Use the Forgejo repository.
+>
+> **Canonical repository:** https://git.simonharms.com/thesimonharms/jrg-client
+
 # jrg-client
 
 **TypeScript library for accessing Jaringan (JRG) pages** — in the browser, Node.js, Bun, or Deno.
